@@ -6,6 +6,15 @@ resource "aws_default_vpc" "default_vpc" {
   }
 }
 
+# store the terraform state file in s3
+terraform {
+    backend "s3" {
+    bucket  = "cicd-terraform-state-bucket4"
+    key     = "build/terraform.tfstate"
+    region  = "us-east-1"
+  }
+}
+
 
 # use data source to get all avalablility zones in region
 data "aws_availability_zones" "available_zones" {}
