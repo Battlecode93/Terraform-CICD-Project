@@ -1,3 +1,9 @@
+# configured aws provider with proper credentials
+provider "aws" {
+  region  = "us-east-1"
+  profile = "Corey"
+}
+
 # create default vpc if one does not exit
 resource "aws_default_vpc" "default_vpc" {
 
@@ -12,6 +18,7 @@ terraform {
     bucket  = "cicd-terraform-state-bucket4"
     key     = "build/terraform.tfstate"
     region  = "us-east-1"
+    profile = "Corey"
   }
 }
 
