@@ -1,5 +1,7 @@
-
 # CI/CD Terraform Project
+
+![Alt text](Full-Architecture.png)
+----
 
 ## Project Overview
 
